@@ -73,11 +73,11 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(getBaseContext(), SecondActivity.class);
 
                     if(cbOneWay.isChecked()){
-                        total = pax * 100;
+                        total = pax * 100 * 1;
                         intent.putExtra("type", "One Way Trip");
-                        intent.putExtra("costs", total);
+                        intent.putExtra("cost", total);
                     }
-                    else if(cbRoundTrip.isChecked()){
+                    else{
                         total = pax * 100 * 2;
                         intent.putExtra("type", "Round Trip");
                         intent.putExtra("cost", total);
